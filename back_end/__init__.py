@@ -4,7 +4,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from config import Config
 
-back_end = Flask(__name__)
+back_end = Flask(__name__, template_folder='../front_end/templates', static_folder='../')
 back_end.config.from_object(Config)
 db = SQLAlchemy(back_end)
 migrate = Migrate(back_end, db)

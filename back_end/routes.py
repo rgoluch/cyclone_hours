@@ -2,14 +2,14 @@ from back_end import back_end
 from flask import render_template, flash, redirect, url_for, request
 from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.urls import url_parse
-from back_end import app, db
+from back_end import back_end, db
 from back_end.forms import LoginForm, RegistrationForm
-from back_end.models import User
+from back_end.models import Student
 
 @back_end.route('/')
 @back_end.route('/index')
 def index():
-    return render_template('front_end/index.html', title='Home')
+    return render_template('index.html', title='Sign In')
 
 @back_end.route('/login', methods=['GET', 'POST'])
 def login():
@@ -17,7 +17,7 @@ def login():
         return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
+        user = Student.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_passowrd(form.password.data):
             flash('Invalid username or password')
             return redirect(url_for('login'))
@@ -31,7 +31,7 @@ def login():
 @back_end.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('idex'))
+    return redirect(url_for('index'))
 
 @back_end.route('/register', methods=['GET', 'POST'])
 def registration():
@@ -39,7 +39,7 @@ def registration():
         return redirect(url_for('index'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(username=form.username.data, email=form.email.data)
+        user = Student(username=form.username.data, email=form.email.data)
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()

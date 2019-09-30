@@ -40,8 +40,8 @@ body {
 
 .app-logo-pic{
     position: absolute;
-    left: 525px;
-    top: 99px;
+    left: 43%;
+    top: 15%;
     max-width: 50%;
     height: auto;
     width: auto;
@@ -89,7 +89,8 @@ body {
     justify-content: center;
     vertical-align: middle;
     text-align: center;
-    top: 240px; 
+    top: 35%; 
+    left: 43%;
 }
 
 .Net_id{
@@ -99,8 +100,8 @@ body {
     width: auto;
     vertical-align: middle;
     /* text-align: left; */
-    top:20px;
-    left:20px;
+    top:10%;
+    left:3%;
 }
 
 .pass{
@@ -110,8 +111,8 @@ body {
     width: auto;
     vertical-align: middle;
     text-align: left;
-    top:140px;
-    left:20px;
+    top:48%;
+    left:3%;
 }
 
 .net_id_entry{
@@ -119,8 +120,8 @@ body {
     position: absolute;
     width: 600.2px;
     height: 55.54px;
-    top:60px;
-    left:20px;
+    top:20%;
+    left:3%;
     background: rgba(229, 229, 229, 0.25);
 }
 
@@ -129,26 +130,34 @@ body {
     position: absolute;
     width: 600.2px;
     height: 55.54px;
-    top:175px;
-    left:20px;
+    top:58%;
+    left:3%;
     background: rgba(229, 229, 229, 0.25);
 }
 
 .ia_logo{
     position: absolute;
-    left: 50px;
-    top: 225px; 
+    left: 2%; 
+    top: 37%; 
     max-width: 35%;
     height: auto;
-    width: auto;
+    /* width: auto; */
     /* justify-content: left; */
     vertical-align: center;
 }
 
+.code{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    max-width: 38%;
+    height: auto;
+}
+
 .log_in_button{
     position: absolute;
-    top:225px;
-    left:535px;
+    top:75%;
+    left:77%;
     height: 80.46px;
     width: 219.89px;
     max-width: 20%;

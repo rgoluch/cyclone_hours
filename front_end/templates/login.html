@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <header class="main-header">
+        <a href="/" class="app-logo">
+            <form action="" method="post" novalidate>
+            <img class="app-logo-pic" src="../../static/login_logo.png">
+            <div class="box">
+                <div class="id_box">
+                    <img class="Net_id" src="../../static/Net_ID.png">
+                    <div class="net_id_entry">{{ form.username(size=32) }}</div>
+                </div>
+                <div class="pass_box">
+                    <img class="pass" src="../../static/Password.png">
+                    <div class="pass_entry"></div>
+                </div>
+                <div>
+                    <input type="image" src="../../static/submit.svg" name="log_in" class="log_in_button" id="log_in" formmethod="POST"/>
+                </div>
+            </div>
+            </form>
+        </a>
+
+        <div class="iastate">
+            <img class="code" src="../../static/code.png">
+            <img class="ia_logo" src="../../static/Iowa_State_Cyclones_logo.png">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="start.html">About</a></li>
+                <li><a href="join.html">FAQ</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home-main-section">
+        <div class="image-wrapper">
+
+        </div>
+        <div></div>
+    </section>
+{% endblock %}
